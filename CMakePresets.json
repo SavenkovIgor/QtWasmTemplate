@@ -33,7 +33,6 @@
       "hidden": true,
       "generator": "Ninja",
       "warnings": {
-        "dev": true,
         "deprecated": true,
         "uninitialized": true,
         "unusedCli": true,
