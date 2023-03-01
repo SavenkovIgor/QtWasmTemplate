@@ -38,8 +38,7 @@ jobs:
         host: 'linux'
         target: 'desktop'
         arch: 'wasm_32'
-        modules: 'qtimageformats qt5compat qtshadertools'
-        archives: 'qttranslations qttools qtsvg qtdeclarative qtbase icu'
+        archives: 'qtdeclarative qtbase'
         cache: true
 
     - name: CMake configure
