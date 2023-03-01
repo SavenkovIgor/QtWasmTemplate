@@ -49,7 +49,6 @@
       "inherits": ["default", "ci_qt_env", "ci_emsdk_env", "release_build"],
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{QT_VERSION_ROOT}/wasm_32/lib/cmake/Qt6/qt.toolchain.cmake",
         "CMAKE_PREFIX_PATH": "$env{QT_VERSION_ROOT}/wasm_32"
       }
     }
