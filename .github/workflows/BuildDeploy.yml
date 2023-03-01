@@ -37,7 +37,7 @@ jobs:
         dir: ${{ github.workspace }}
         host: 'linux'
         target: 'desktop'
-        arch: 'gcc_64'
+        arch: 'wasm_32'
         modules: 'qtimageformats qt5compat qtshadertools'
         archives: 'qttranslations qttools qtsvg qtdeclarative qtbase icu'
         cache: true
