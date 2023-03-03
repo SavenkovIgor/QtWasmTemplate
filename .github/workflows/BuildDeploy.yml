@@ -37,9 +37,7 @@ jobs:
         aqtversion: '==2.1.*'
         version: ${{ env.QT_VERSION }}
         dir: ${{ github.workspace }}
-        host: 'linux'
         target: 'desktop'
-        arch: 'wasm_32'
         archives: 'qtdeclarative qtbase'
         cache: true
 
