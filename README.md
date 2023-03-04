@@ -2,7 +2,7 @@
 
 This is a template repository for C++/Qt projects that can be deployed to Github Pages.
 
-It uses aqtinstall as a Qt installer.
+It uses `aqtinstall` as a Qt installer.
 
 [![Build and deploy to GitHub Pages](https://github.com/SavenkovIgor/QtWasmTemplate/actions/workflows/BuildDeploy.yml/badge.svg)](https://github.com/SavenkovIgor/QtWasmTemplate/actions/workflows/BuildDeploy.yml)
 
