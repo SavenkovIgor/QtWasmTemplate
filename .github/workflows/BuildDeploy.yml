@@ -65,8 +65,6 @@ jobs:
   deploy:
     needs: build
 
-    if: github.event_name == "push"
-
     permissions:
       id-token: write
       pages: write
@@ -78,5 +76,6 @@ jobs:
 
     steps:
     - name: Deploy to GitHub Pages
+      if: github.event_name == "push"
       id: deployment
       uses: actions/deploy-pages@v1
