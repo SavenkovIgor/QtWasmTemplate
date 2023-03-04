@@ -41,7 +41,7 @@ jobs:
         cache: true
 
     - name: Check qt install
-      working-directory: ${{ github.workspace }}/Qt
+      working-directory: ${{ github.workspace }}/Qt/6.4.2
       run: ls -la
 
     - name: CMake configure
