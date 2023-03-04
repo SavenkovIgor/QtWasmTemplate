@@ -64,7 +64,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
-        path: ${{github.workspace}}/build/wasm_release
+        path: ${{github.workspace}}/build/wasm_release/deploy
 
   deploy:
     needs: build
