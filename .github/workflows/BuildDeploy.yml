@@ -31,7 +31,7 @@ jobs:
         version: ${{ env.WASM_VERSION }}
         actions-cache-folder: 'emsdk-cache'
 
-    - name: Install Qt
+    - name: Install Qt for gcc_64 (need for wasm_32 proper work)
       uses: jurplel/install-qt-action@v3
       with:
         version: ${{ env.QT_VERSION }}
@@ -39,6 +39,17 @@ jobs:
         modules: 'qtimageformats qt5compat qtshadertools'
         archives: 'qttranslations qttools qtsvg qtdeclarative qtbase icu'
         cache: true
+        arch: gcc_64
+
+    - name: Install Qt for wasm_32
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: ${{ env.QT_VERSION }}
+        dir: ${{ github.workspace }}
+        modules: 'qtimageformats qt5compat qtshadertools'
+        archives: 'qttranslations qttools qtsvg qtdeclarative qtbase icu'
+        cache: true
+        arch: wasm_32
 
     - name: Check qt install
       working-directory: ${{ github.workspace }}/Qt/6.4.2
