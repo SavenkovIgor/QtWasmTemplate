@@ -19,6 +19,7 @@ It uses `aqtinstall` as a Qt installer.
 ## Getting Started
 
 To use this template, click the "Use this template" button at the top of the repository.
+
 Also you need to activate Github Pages for your repository with Github actions way of deployment.
 
 ## Dependencies
