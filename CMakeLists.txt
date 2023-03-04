@@ -9,6 +9,10 @@ project (QtWasmTemplate
          HOMEPAGE_URL ""
          LANGUAGES CXX)
 
+if (NOT DEFINED ENV{EMSDK})
+    message (FATAL_ERROR "EMSDK environment variable is not defined. Please install emscripten SDK and set EMSDK environment variable.")
+endif ()
+
 find_package (Qt6 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup()

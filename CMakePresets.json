@@ -7,28 +7,6 @@
   },
   "configurePresets": [
     {
-      "name": "ci_emsdk_env",
-      "hidden": true,
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "$penv{EMSDK}/upstream/emscripten/emcc",
-        "CMAKE_CXX_COMPILER": "$penv{EMSDK}/upstream/emscripten/em++"
-      }
-    },
-    {
-      "name": "ci_qt_env",
-      "hidden": true,
-      "environment": {
-        "QT_ROOT": "$penv{QT_ROOT}",
-        "QT_VERSION": "$penv{QT_VERSION}",
-        "QT_VERSION_ROOT": "$env{QT_ROOT}/$env{QT_VERSION}"
-      }
-    },
-    {
-      "name": "release_build",
-      "hidden": true,
-      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
-    },
-    {
       "name": "default",
       "hidden": true,
       "generator": "Ninja",
@@ -46,9 +24,17 @@
     {
       "name": "wasm_release",
       "displayName": "Ci WebAssembly release build",
-      "inherits": ["default", "ci_qt_env", "ci_emsdk_env", "release_build"],
+      "inherits": ["default"],
       "binaryDir": "${sourceDir}/build/${presetName}",
+      "environment": {
+        "QT_ROOT": "$penv{QT_ROOT}",
+        "QT_VERSION": "$penv{QT_VERSION}",
+        "QT_VERSION_ROOT": "$env{QT_ROOT}/$env{QT_VERSION}"
+      },
       "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{QT_VERSION_ROOT}/wasm_32/lib/cmake/Qt6/qt.toolchain.cmake",
+        "QT_HOST_PATH": "$env{QT_VERSION_ROOT}/gcc_64",
         "CMAKE_PREFIX_PATH": "$env{QT_VERSION_ROOT}/wasm_32"
       }
     }
