@@ -2,9 +2,9 @@
 
 This is a template repository for C++/Qt projects that can be deployed to Github Pages.
 
-It uses `aqtinstall` as a Qt installer.
-
 [![Build and deploy to GitHub Pages](https://github.com/SavenkovIgor/QtWasmTemplate/actions/workflows/BuildDeploy.yml/badge.svg)](https://github.com/SavenkovIgor/QtWasmTemplate/actions/workflows/BuildDeploy.yml)
+
+Deploy example here: [QtWasmTemplate](https://savenkovigor.github.io/QtWasmTemplate/). :warning: Wait ~20 seconds while it loads the Qt libraries.
 
 ## Project structure
 ```bash
@@ -25,6 +25,7 @@ Also you need to activate Github Pages for your repository with Github actions w
 ## Dependencies
 - Cmake/Ninja
 - Qt 6.4.2
+- aqtinstall (script for qt installation. optional)
 
 ## :hammer_and_wrench: Build
 To build this project you can use a script
