@@ -7,9 +7,9 @@ on:
     branches: [ "main" ]
 
 env:
+  QT_ROOT: ${{ github.workspace }}/Qt
   QT_VERSION: 6.4.2
   WASM_VERSION: 3.1.14
-  QT_ROOT: ${{ github.workspace }}/Qt
 
 jobs:
   build:
@@ -51,12 +51,8 @@ jobs:
         cache: true
         arch: wasm_32
 
-    - name: Check qt install
-      working-directory: ${{ github.workspace }}/Qt/6.4.2
-      run: ls -la
-
     - name: CMake configure
-      run: cmake --preset wasm_release ./
+      run: cmake --preset wasm_release -Wno-dev
 
     - name: Cmake build
       run: cmake --build --preset wasm_release
