@@ -53,3 +53,7 @@ compile_commands.json
 
 conanfiles/
 build/
+
+# Installation of Qt sdk into project folder with aqtinstall
+Qt/
+aqtinstall.log
