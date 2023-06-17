@@ -24,7 +24,7 @@ Also you need to activate Github Pages for your repository with Github actions w
 
 ## Dependencies
 - Cmake/Ninja
-- Qt 6.4.2
+- Qt 6.5.1
 - aqtinstall (script for qt installation. optional)
 
 ## :hammer_and_wrench: Build
