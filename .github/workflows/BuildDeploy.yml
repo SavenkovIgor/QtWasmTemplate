@@ -10,6 +10,7 @@ env:
   QT_ROOT: ${{ github.workspace }}/Qt
   QT_VERSION: 6.5.1
   WASM_VERSION: 3.1.25
+  AQT_VERSION: ==3.1.5
 
 jobs:
   build:
@@ -34,6 +35,7 @@ jobs:
     - name: Install Qt for gcc_64 (need for wasm_singlethread proper work)
       uses: jurplel/install-qt-action@v3
       with:
+        aqtversion: ${{ env.AQT_VERSION }}
         version: ${{ env.QT_VERSION }}
         dir: ${{ github.workspace }}
         modules: 'qtimageformats qt5compat qtshadertools'
@@ -44,6 +46,7 @@ jobs:
     - name: Install Qt for wasm_singlethread
       uses: jurplel/install-qt-action@v3
       with:
+        aqtversion: ${{ env.AQT_VERSION }}
         version: ${{ env.QT_VERSION }}
         dir: ${{ github.workspace }}
         modules: 'qtimageformats qt5compat qtshadertools'
