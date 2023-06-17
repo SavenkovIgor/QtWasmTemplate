@@ -15,7 +15,7 @@ endif ()
 
 find_package (Qt6 REQUIRED COMPONENTS Quick)
 
-qt_standard_project_setup()
+qt_standard_project_setup(REQUIRES 6.5)
 
 qt_add_executable (QtWasmTemplate main.cpp)
 
@@ -28,8 +28,7 @@ set_target_properties (QtWasmTemplate
 qt_add_qml_module (QtWasmTemplate
     URI QtTemplateModule
     VERSION 1.0
-    QML_FILES main.qml
-    RESOURCE_PREFIX "/qt/qml")
+    QML_FILES main.qml)
 
 target_link_libraries (QtWasmTemplate PRIVATE Qt6::Quick)
 
