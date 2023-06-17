@@ -68,7 +68,7 @@ jobs:
   deploy:
     needs: build
     # Runs only on push to main branch
-    if: github.ref_name == 'refs/heads/main' 
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     permissions:
       id-token: write
