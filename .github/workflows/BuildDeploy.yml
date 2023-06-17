@@ -67,6 +67,8 @@ jobs:
 
   deploy:
     needs: build
+    # Runs only on push to main branch
+    if: github.ref_name == 'refs/heads/main' 
 
     permissions:
       id-token: write
