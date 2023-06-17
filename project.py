@@ -42,7 +42,7 @@ class Project:
 
         env = os.environ.copy()
         env['QT_ROOT'] = self.root_dir() / 'Qt'
-        env['QT_VERSION'] = '6.4.2'
+        env['QT_VERSION'] = '6.5.1'
 
         # Configure cmake
         system_call('cmake --preset=wasm_release -Wno-dev', env=env)
