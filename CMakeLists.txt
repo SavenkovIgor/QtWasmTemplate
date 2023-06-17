@@ -28,7 +28,7 @@ set_target_properties (QtWasmTemplate
 qt_add_qml_module (QtWasmTemplate
     URI QtTemplateModule
     VERSION 1.0
-    QML_FILES main.qml)
+    QML_FILES Main.qml)
 
 target_link_libraries (QtWasmTemplate PRIVATE Qt6::Quick)
 
