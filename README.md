@@ -40,8 +40,8 @@ or you can run commands from script manually:
 pip install aqtinstall
 
 # Install Qt [optional if you already have Qt installed]
-aqt install-qt linux desktop 6.4.2 gcc_64 --outputdir ./Qt
-aqt install-qt linux desktop 6.4.2 wasm_32 --outputdir ./Qt
+aqt install-qt linux desktop 6.5.1 gcc_64 --outputdir ./Qt
+aqt install-qt linux desktop 6.5.1 wasm_32 --outputdir ./Qt
 
 # Configure cmake
 cmake --preset=wasm_release -Wno-dev
